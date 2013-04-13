@@ -5,6 +5,15 @@
 using namespace std;
 
 class arbolB
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include <map>
+
+typedef float evaluacion;
+using namespace std;
+
+class arbolB
 {
 private:
        string m_cabeza;
@@ -18,18 +27,34 @@ public:
        void setHr(arbolB * pHr){m_Hr=pHr;}    
        void setLr(arbolB * pLr){m_Hr=pLr;}   
        void setHead(string head){m_cabeza=head;}
-       
+       void insertar(string nodo){}
+       void evaluar();
        
 };
-
+ float resta(float a,float b)
+{
+       return (a - b);      
+}
+float suma(float a,float b)
+{
+       return (a + b);      
+}
+ map<string , float(*)(float  ,float )> funciones; 
 
 int  main ()
 {
+     float(*fs)(float  ,float );
+ funciones["+"]=&::suma; 
+   funciones["-"]=&::resta; 
+       
+
  arbolB a;
- if(a.tiene_hijo())
- {
- cout<<"tiene hijo";}
+ string op;
+ cin>>op;
+ fs=funciones[op];
+ cout<<fs;
  int c;
  cin>>c;    
  return 0;
 }
+
