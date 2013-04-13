@@ -1,10 +1,35 @@
-#include <cstdlib>
 #include <iostream>
+#include <cstdlib>
+#include <string>
 
 using namespace std;
 
-int main(int argc, char *argv[])
+class arbolB
 {
-    system("PAUSE");
-    return EXIT_SUCCESS;
+private:
+       string m_cabeza;
+       arbolB* m_Hr;
+       arbolB *m_Hl;
+public:       
+              arbolB(){m_cabeza =" ";m_Hr=0;m_Hl=0;}
+       arbolB(string cabeza){m_cabeza =cabeza;m_Hr=0;m_Hl=0;}
+       ~arbolB(){delete(m_Hr);delete(m_Hl);}
+       bool tiene_hijo(){if(m_Hr!=0||m_Hl!=0)return true;return false;};    
+       void setHr(arbolB * pHr){m_Hr=pHr;}    
+       void setLr(arbolB * pLr){m_Hr=pLr;}   
+       void setHead(string head){m_cabeza=head;}
+       
+       
+};
+
+
+int  main ()
+{
+ arbolB a;
+ if(a.tiene_hijo())
+ {
+ cout<<"tiene hijo";}
+ int c;
+ cin>>c;    
+ return 0;
 }
