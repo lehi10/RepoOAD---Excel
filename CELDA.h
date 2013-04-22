@@ -21,3 +21,4 @@ CELDA::~CELDA()
     delete m_der;
     delete m_abj;
 }
+// EN PROCESO.... 
