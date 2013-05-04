@@ -5,9 +5,7 @@
 class nodo
 {
     public:
-        nodo();
         virtual double eval()=0;
-        virtual ~nodo();
     protected:
     private:
 };
