@@ -1,20 +1,16 @@
 #ifndef ARBOLB_H
 #define ARBOLB_H
-#include "nodo.h"
+#include "nodoTrue.h"
 
 class ArbolB
 {
     public:
-        ArbolB(nodo * pn);
+        ArbolB();
+        void set_headptr(nodoTrue *  mainhead);
         virtual ~ArbolB();
-        void insertar();
-        double eval_a();
     protected:
     private:
-    nodo * m_head;
-    ArbolB * Hr;
-    ArbolB * Hl;
-
+        nodoTrue * headptr;
 };
 
 #endif // ARBOLB_H
