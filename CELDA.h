@@ -1,24 +1,37 @@
-#include "CELDA.h"
+#include "celda.h"
 
-CELDA::CELDA()
+celda::celda(const string &name,const int &x,const int &y,const valor &n,const string & text)
 {
-    m_der=NULL;
-    m_abj=NULL;
-    m_fila=0;
-    m_colum=0;
-    m_valor=" ";//ctor
+    m_x=x;
+    m_y=y;
+    m_number=n;
+    m_text=text;
+    m_orden=name;
+    m_punteroD=0;
+    m_punteroR= 0;
 }
-CELDA::CELDA(string val)
+void celda :: set_celdaD(celda *  puntero)
 {
-    m_valor=val;
-    m_der=NULL;
-    m_abj=NULL;
-    m_fila=0;
-    m_colum=0;
+    m_punteroD=puntero;
 }
-CELDA::~CELDA()
+
+void celda :: set_celdaR(celda *  puntero)
 {
-    delete m_der;
-    delete m_abj;
+    m_punteroR=puntero;
 }
-// EN PROCESO.... 
+valor celda:: eval(const valor& ,const valor &)
+{
+    valor a;
+    if(m_text=="")
+    {
+        a=0;
+    }
+    else
+       a=0;
+    return m_number+a;
+}
+celda::~celda()
+{
+    delete m_punteroD;
+    delete m_punteroR;
+}
