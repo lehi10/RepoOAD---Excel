@@ -1,14 +1,13 @@
-#include "number_c.h"
+#include "number.h"
 
-number_c::number_c(double a)
+number:: number(const valor &a)
 {
-    m_number_c=a;
+    m_valor =a;
 }
-double number_c :: eval ()
+valor number ::eval(const valor &,const valor &)
 {
-    return m_number_c;
+ return m_valor;
 }
-number_c::~number_c()
+number::~number()
 {
-    //dtor
 }
