@@ -2,19 +2,21 @@
 #define OPERACION_H
 #include "nodo.h"
 
+typedef double num;
+
 class operacion: public nodo
 {
     public:
-        operacion(double (*pf)(double,double));
-        virtual double eval();
-        void set_R(double r);
-        void set_L(double l);
+        operacion(num (*pf)(num,num));
+        virtual num eval();
+        void set_R(num r);
+        void set_L(num l);
         virtual ~operacion();
     protected:
     private:
-    double (*m_pf)(double,double);
-    double R;
-    double L;
+    num (*m_pf)(num,num);
+    num R;
+    num L;
 
 };
 
