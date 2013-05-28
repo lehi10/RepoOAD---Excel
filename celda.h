@@ -2,10 +2,7 @@
 #define CELDA_H
 #include "nodo.h"
 #include "ArbolB.h"
-#include <vector>
-#include <map>
-#include <string>
-using namespace std;
+#include "declare.h"
 
 class celda:public nodo
 {
