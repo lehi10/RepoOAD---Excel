@@ -1,10 +1,8 @@
 #ifndef CELDA_H
 #define CELDA_H
-#include <string>
-#include <iostream>
-#include <cstdlib>
+#include "declare.h"
 
-using namespace std;
+
 class CELDA
 {
     private:
