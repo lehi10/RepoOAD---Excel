@@ -6,8 +6,7 @@
 #include <cstdlib>
 #include <vector>
 #include <map>
-#include <string>
-
+#include <list>
 using namespace std;
 
 typedef double num;
