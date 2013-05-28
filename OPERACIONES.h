@@ -1,5 +1,6 @@
 #ifndef OPERACIONES_H
 #define OPERACIONES_H
+#include "declare.h"
 
 
 class OPERACIONES
@@ -9,10 +10,10 @@ class OPERACIONES
 
     public:
         OPERACIONES();
-        float suma(float a, float b);
-        float resta(float a,float b);
-        float multip(float a,float b);
-        float divi(float a,float b);
+        num suma(num a, num b);
+        num resta(num a,num b);
+        num multip(num a,num b);
+        num divi(num a,num b);
     protected:
 
 };
