@@ -1,8 +1,6 @@
 #ifndef PARSER_H
 #define PARSER_H
-#include <list>
-#include <string>
-using namespace std;
+#include "declare.h"
 
 class parser
 {
